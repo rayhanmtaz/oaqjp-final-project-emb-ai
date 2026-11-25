@@ -1,3 +1,4 @@
+cat << 'EOF' > emotion_detection.py
 import requests
 
 def emotion_detector(text_to_analyse):
@@ -6,3 +7,4 @@ def emotion_detector(text_to_analyse):
     header = {"grpc-metadata-mm-model-id": "emotion_aggregated-workflow_lang_en_stock"}
     response = requests.post(url, json=myobj, headers=header)
     return response.text
+EOF
